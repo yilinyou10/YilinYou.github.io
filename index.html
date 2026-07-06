@@ -17,17 +17,6 @@
       --muted: #6b7280;
       --border: #e5e7eb;
       --light-blue: #eaf3ff;
-      .research-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-@media (max-width: 780px) {
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-}
     }
 
     * {
@@ -55,17 +44,11 @@
       text-decoration: underline;
     }
 
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 28px 20px 70px;
-    }
-
     nav {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(246, 248, 251, 0.92);
+      background: rgba(246, 248, 251, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -94,6 +77,12 @@
     .nav-links a:hover {
       color: var(--secondary);
       text-decoration: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px 70px;
     }
 
     .hero {
@@ -204,6 +193,17 @@
       gap: 18px;
     }
 
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .research-grid .card {
+      height: 100%;
+      min-height: 210px;
+    }
+
     .card {
       background: #fbfdff;
       border: 1px solid var(--border);
@@ -265,9 +265,9 @@
       color: #047857;
     }
 
-    .status-progress {
-      background: #fff7ed;
-      color: #c2410c;
+    .status-book {
+      background: #eef2ff;
+      color: #3730a3;
     }
 
     ul {
@@ -331,6 +331,10 @@
       .two-col {
         grid-template-columns: 1fr;
       }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -366,18 +370,19 @@
 
         <p>
           I am a PhD candidate at the School of Architecture and Civil Engineering,
-          Xiamen University, now I am a visiting student in NUS. My research focuses on thermotropic and thermochromic
+          Xiamen University. My research focuses on thermotropic and thermochromic
           smart windows, building energy simulation, daylighting performance,
           climate-adaptive façade systems, and urban building energy modelling
           under future climate scenarios.
         </p>
 
         <div class="buttons">
-          <a href="mailto:youyl@stu.xmu.edu.cn">Email</a>
-          <a href="https://scholar.google.com/citations?user=hlppK5sAAAAJ&hl=en" target="_blank">Google Scholar</a>
-          <a href="https://orcid.org/0009-0005-6773-7765>ORCID</a>
-          <a href="https://www.researchgate.net/profile/Yilin-You-2?ev=hdr_xprf" target="_blank">ResearchGate</a>
+          <a href="mailto:yyl474033218@gmail.com">Email</a>
+          <a href="https://www.researchgate.net/profile/Yilin-You-2" target="_blank">ResearchGate</a>
+          <a href="#" target="_blank">Google Scholar</a>
+          <a href="#" target="_blank">ORCID</a>
           <a href="#" target="_blank">GitHub</a>
+          <a href="cv.pdf" target="_blank">CV</a>
         </div>
       </div>
     </section>
@@ -425,8 +430,7 @@
           <h3>Building Energy Simulation</h3>
           <p>
             EnergyPlus modelling, envelope performance evaluation, heating and
-            cooling energy analysis, and parametric simulation workflow<div class="card">
-      <h3>Smart Windows</h3>s.
+            cooling energy analysis, and parametric simulation workflows.
           </p>
         </div>
 
@@ -459,218 +463,197 @@
       </p>
     </section>
 
-   <section class="section" id="publications">
-  <h2>Selected Publications</h2>
+    <section class="section" id="publications">
+      <h2>Selected Publications</h2>
 
-  <div class="publication">
-    <div class="pub-title">
-      Evaluation of the Visual Comfort and Energy Performance of Shading Façades with Control Strategy in Response to Evaluation Indices
-    </div>
-    <div class="pub-meta">
-      Chuanrong Cui, <strong>Yilin You</strong>, Qiao Zheng, Feng Shi, Xiaoqiang Hong.
-      <em>Transindividual Intelligence</em>, Springer Nature Singapore, pp.170–182, 2026.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1007/978-981-92-0615-5_15" target="_blank">
-        10.1007/978-981-92-0615-5_15
-      </a>
-      |
-      <a href="papers/shading-facades-control-strategy-2026.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Book Chapter</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Evaluation of the Visual Comfort and Energy Performance of Shading Façades with Control Strategy in Response to Evaluation Indices
+        </div>
+        <div class="pub-meta">
+          Chuanrong Cui, <strong>Yilin You</strong>, Qiao Zheng, Feng Shi, Xiaoqiang Hong.
+          <em>Transindividual Intelligence</em>, Springer Nature Singapore, pp.170–182, 2026.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1007/978-981-92-0615-5_15" target="_blank">
+            10.1007/978-981-92-0615-5_15
+          </a>
+        </div>
+        <span class="status status-book">Book Chapter</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Building performance evaluation of double-skin facade with thermotropic glazing in a reference office room of China
-    </div>
-    <div class="pub-meta">
-      Xiaoqiang Hong, Xia Deng, <strong>Yilin You</strong>, Weiqiang Liu, et al.
-      <em>Energy and Buildings</em>, 361, 117446, 2026.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.enbuild.2026.117446" target="_blank">
-        10.1016/j.enbuild.2026.117446
-      </a>
-      |
-      <a href="papers/dsf-thermotropic-glazing-2026.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Building performance evaluation of double-skin facade with thermotropic glazing in a reference office room of China
+        </div>
+        <div class="pub-meta">
+          Xiaoqiang Hong, Xia Deng, <strong>Yilin You</strong>, Weiqiang Liu, et al.
+          <em>Energy and Buildings</em>, 361, 117446, 2026.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.enbuild.2026.117446" target="_blank">
+            10.1016/j.enbuild.2026.117446
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Thermotropic glass vs. vertical shading: Evaluation of building energy, daylighting and thermal comfort performance
-    </div>
-    <div class="pub-meta">
-      Xuan Yang, Kexin Li, <strong>Yilin You</strong>, Shaosen Wang, et al.
-      <em>Building and Environment</em>, 288, 113943, 2025.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.buildenv.2025.113943" target="_blank">
-        10.1016/j.buildenv.2025.113943
-      </a>
-      |
-      <a href="papers/thermotropic-glass-vs-vertical-shading-2025.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Thermotropic glass vs. vertical shading: Evaluation of building energy, daylighting and thermal comfort performance
+        </div>
+        <div class="pub-meta">
+          Xuan Yang, Kexin Li, <strong>Yilin You</strong>, Shaosen Wang, et al.
+          <em>Building and Environment</em>, 288, 113943, 2025.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.buildenv.2025.113943" target="_blank">
+            10.1016/j.buildenv.2025.113943
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Performance analysis of an all-climate thermotropic smart window for enhancing energy saving and daylighting comfort
-    </div>
-    <div class="pub-meta">
-      <strong>Yilin You</strong>, Xia Deng, Xuan Yang, Ruiyang Yang, et al.
-      <em>Energy and Buildings</em>, 347, 116432, 2025.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.enbuild.2025.116432" target="_blank">
-        10.1016/j.enbuild.2025.116432
-      </a>
-      |
-      <a href="papers/all-climate-thermotropic-smart-window-2025.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Performance analysis of an all-climate thermotropic smart window for enhancing energy saving and daylighting comfort
+        </div>
+        <div class="pub-meta">
+          <strong>Yilin You</strong>, Xia Deng, Xuan Yang, Ruiyang Yang, et al.
+          <em>Energy and Buildings</em>, 347, 116432, 2025.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.enbuild.2025.116432" target="_blank">
+            10.1016/j.enbuild.2025.116432
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Impact of a thermotropic window on indoor visual and thermal comfort in a slightly warm non-air-condition environment
-    </div>
-    <div class="pub-meta">
-      Xiaoqiang Hong, Zichang Zong, <strong>Yilin You</strong>, Xuan Yang, et al.
-      <em>Building and Environment</em>, 285, 113539, 2025.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.buildenv.2025.113539" target="_blank">
-        10.1016/j.buildenv.2025.113539
-      </a>
-      |
-      <a href="papers/thermotropic-window-visual-thermal-comfort-2025.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Impact of a thermotropic window on indoor visual and thermal comfort in a slightly warm non-air-condition environment
+        </div>
+        <div class="pub-meta">
+          Xiaoqiang Hong, Zichang Zong, <strong>Yilin You</strong>, Xuan Yang, et al.
+          <em>Building and Environment</em>, 285, 113539, 2025.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.buildenv.2025.113539" target="_blank">
+            10.1016/j.buildenv.2025.113539
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Energy-saving and visual-thermal performance of multi-sectional DSF system in a typical office room across five climate zones in China
-    </div>
-    <div class="pub-meta">
-      Feng Shi, Chenyuan Zheng, Junwei Lin, Xuan Yang, et al.
-      <em>Building and Environment</em>, 277, 112945, 2025.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.buildenv.2025.112945" target="_blank">
-        10.1016/j.buildenv.2025.112945
-      </a>
-      |
-      <a href="papers/multi-sectional-dsf-system-2025.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Energy-saving and visual-thermal performance of multi-sectional DSF system in a typical office room across five climate zones in China
+        </div>
+        <div class="pub-meta">
+          Feng Shi, Chenyuan Zheng, Junwei Lin, Xuan Yang, et al.
+          <em>Building and Environment</em>, 277, 112945, 2025.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.buildenv.2025.112945" target="_blank">
+            10.1016/j.buildenv.2025.112945
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Optimal transition temperature maps of thermotropic glazing in a reference office room of China considering the building performance
-    </div>
-    <div class="pub-meta">
-      <strong>Yilin You</strong>, Xuan Yang, Ziwen Xu, Chuanrong Cui, et al.
-      <em>Applied Thermal Engineering</em>, 269, 125970, 2025.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.applthermaleng.2025.125970" target="_blank">
-        10.1016/j.applthermaleng.2025.125970
-      </a>
-      |
-      <a href="papers/optimal-transition-temperature-maps-2025.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Optimal transition temperature maps of thermotropic glazing in a reference office room of China considering the building performance
+        </div>
+        <div class="pub-meta">
+          <strong>Yilin You</strong>, Xuan Yang, Ziwen Xu, Chuanrong Cui, et al.
+          <em>Applied Thermal Engineering</em>, 269, 125970, 2025.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.applthermaleng.2025.125970" target="_blank">
+            10.1016/j.applthermaleng.2025.125970
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Experimental study on indoor thermal and daylighting performance of different thermotropic window systems in subtropical climate
-    </div>
-    <div class="pub-meta">
-      <strong>Yilin You</strong>, Xuan Yang, Xia Deng, Feng Shi, et al.
-      <em>Energy and Buildings</em>, 329, 115276, 2025.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.enbuild.2025.115276" target="_blank">
-        10.1016/j.enbuild.2025.115276
-      </a>
-      |
-      <a href="papers/thermotropic-window-systems-subtropical-climate-2025.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Experimental study on indoor thermal and daylighting performance of different thermotropic window systems in subtropical climate
+        </div>
+        <div class="pub-meta">
+          <strong>Yilin You</strong>, Xuan Yang, Xia Deng, Feng Shi, et al.
+          <em>Energy and Buildings</em>, 329, 115276, 2025.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.enbuild.2025.115276" target="_blank">
+            10.1016/j.enbuild.2025.115276
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Comparative analysis of hydrogel-based thermotropic glazing and fixed horizontal overhangs in building performance
-    </div>
-    <div class="pub-meta">
-      Xiaoqiang Hong, Xuan Yang, <strong>Yilin You</strong>, Feng Shi, et al.
-      <em>Building and Environment</em>, 266, 112116, 2024.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.buildenv.2024.112116" target="_blank">
-        10.1016/j.buildenv.2024.112116
-      </a>
-      |
-      <a href="papers/hydrogel-thermotropic-glazing-overhangs-2024.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Comparative analysis of hydrogel-based thermotropic glazing and fixed horizontal overhangs in building performance
+        </div>
+        <div class="pub-meta">
+          Xiaoqiang Hong, Xuan Yang, <strong>Yilin You</strong>, Feng Shi, et al.
+          <em>Building and Environment</em>, 266, 112116, 2024.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.buildenv.2024.112116" target="_blank">
+            10.1016/j.buildenv.2024.112116
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Annual evaluation of the visual-thermal comfort and energy performance of thermotropic glazing in a reference office room of China
-    </div>
-    <div class="pub-meta">
-      Feng Shi, <strong>Yilin You</strong>, Xuan Yang, Xiaoqiang Hong.
-      <em>Building and Environment</em>, 254, 111378, 2024.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.buildenv.2024.111378" target="_blank">
-        10.1016/j.buildenv.2024.111378
-      </a>
-      |
-      <a href="papers/annual-evaluation-thermotropic-glazing-2024.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
+      <div class="publication">
+        <div class="pub-title">
+          Annual evaluation of the visual-thermal comfort and energy performance of thermotropic glazing in a reference office room of China
+        </div>
+        <div class="pub-meta">
+          Feng Shi, <strong>Yilin You</strong>, Xuan Yang, Xiaoqiang Hong.
+          <em>Building and Environment</em>, 254, 111378, 2024.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.buildenv.2024.111378" target="_blank">
+            10.1016/j.buildenv.2024.111378
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
 
-  <div class="publication">
-    <div class="pub-title">
-      Fault detection and diagnosis for Chiller based on Feature-recognition model and Kernel Discriminant Analysis
-    </div>
-    <div class="pub-meta">
-      Xi Bai, Muxing Zhang, Zhenghao Jin, <strong>Yilin You</strong>, et al.
-      <em>Sustainable Cities and Society</em>, 79, 103708, 2022.
-    </div>
-    <div class="pub-note">
-      DOI:
-      <a href="https://doi.org/10.1016/j.scs.2022.103708" target="_blank">
-        10.1016/j.scs.2022.103708
-      </a>
-      |
-      <a href="papers/chiller-fault-detection-diagnosis-2022.pdf" target="_blank">PDF</a>
-    </div>
-    <span class="status">Journal Article</span>
-  </div>
-</section>
+      <div class="publication">
+        <div class="pub-title">
+          Fault detection and diagnosis for Chiller based on Feature-recognition model and Kernel Discriminant Analysis
+        </div>
+        <div class="pub-meta">
+          Xi Bai, Muxing Zhang, Zhenghao Jin, <strong>Yilin You</strong>, et al.
+          <em>Sustainable Cities and Society</em>, 79, 103708, 2022.
+        </div>
+        <div class="pub-note">
+          DOI:
+          <a href="https://doi.org/10.1016/j.scs.2022.103708" target="_blank">
+            10.1016/j.scs.2022.103708
+          </a>
+        </div>
+        <span class="status">Journal Article</span>
+      </div>
+    </section>
+
     <section class="section" id="projects">
       <h2>Selected Research Projects</h2>
 
@@ -690,7 +673,7 @@
           <p>
             GIS-based urban building energy modelling framework for evaluating
             thermotropic glazing retrofit potential across large-scale building
-            stocks under future climate scenarios.
+            stocks under present and future climate scenarios.
           </p>
         </div>
 
@@ -740,7 +723,7 @@
 
       <div class="timeline-item">
         <div class="timeline-title">
-          Master's Degree, Monash University
+          Master's Degree
         </div>
         <div class="timeline-meta">
           Monash University
@@ -825,12 +808,14 @@
 
       <p>
         <strong>Email:</strong>
-        <a href="mailto:youyl@stu.xmu.edu.cn">youyl@stu.xmu.edu.cn</a>
+        <a href="mailto:yyl474033218@gmail.com">yyl474033218@gmail.com</a>
       </p>
 
       <p>
-        <strong>Alternative Email:</strong>
-        <a href="mailto:yyl474033218@gmail.com">yyl474033218@gmail.com</a>
+        <strong>ResearchGate:</strong>
+        <a href="https://www.researchgate.net/profile/Yilin-You-2" target="_blank">
+          https://www.researchgate.net/profile/Yilin-You-2
+        </a>
       </p>
 
       <p>
