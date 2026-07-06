@@ -1,2 +1,2 @@
-# yilin.github.io
+# YilinYou.github.io
 Personal academic website of Yilin You
