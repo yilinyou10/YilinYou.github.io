@@ -196,35 +196,6 @@
       border-color: var(--secondary);
     }
 
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .metric {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.035);
-      text-align: center;
-    }
-
-    .metric-number {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1.2;
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 4px;
-    }
-
     .section {
       background: var(--card);
       border: 1px solid var(--border);
@@ -414,10 +385,6 @@
     }
 
     @media (max-width: 880px) {
-      .metrics {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .research-grid,
       .two-col {
         grid-template-columns: 1fr;
@@ -463,10 +430,6 @@
       .container {
         padding-left: 14px;
         padding-right: 14px;
-      }
-
-      .metrics {
-        grid-template-columns: 1fr;
       }
 
       .nav-links a {
@@ -527,24 +490,6 @@
       </div>
     </section>
 
-    <section class="metrics" aria-label="Research highlights">
-      <div class="metric">
-        <div class="metric-number">11</div>
-        <div class="metric-label">Publications</div>
-      </div>
-      <div class="metric">
-        <div class="metric-number">4</div>
-        <div class="metric-label">First-author works</div>
-      </div>
-      <div class="metric">
-        <div class="metric-number">2022–2026</div>
-        <div class="metric-label">Publication years</div>
-      </div>
-      <div class="metric">
-        <div class="metric-number">Energy+</div>
-        <div class="metric-label">Simulation workflow</div>
-      </div>
-    </section>
 
     <section class="section" id="about">
       <h2>About</h2>
