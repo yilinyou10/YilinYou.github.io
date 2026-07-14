@@ -267,6 +267,67 @@
       font-weight: 600;
     }
 
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .platform-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+      background: linear-gradient(145deg, #fbfdff 0%, #eef6ff 100%);
+      border: 1px solid #dbeafe;
+      border-radius: 18px;
+      padding: 24px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-3px);
+      border-color: #93c5fd;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.10);
+    }
+
+    .platform-label {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 12px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: var(--primary);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .platform-card p {
+      margin: 0 0 18px;
+      color: #4b5563;
+    }
+
+    .platform-link {
+      display: inline-block;
+      width: fit-content;
+      padding: 9px 14px;
+      border-radius: 10px;
+      background: var(--secondary);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .platform-link:hover {
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+    }
+
     .publication {
       display: grid;
       grid-template-columns: 72px 1fr;
@@ -386,6 +447,7 @@
 
     @media (max-width: 880px) {
       .research-grid,
+      .platform-grid,
       .two-col {
         grid-template-columns: 1fr;
       }
@@ -451,6 +513,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#platforms">Platforms</a>
         <a href="#publications">Publications</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -564,6 +627,49 @@
         <span class="tag">Urban Energy Modelling</span>
         <span class="tag">Future Climate Scenarios</span>
       </p>
+    </section>
+
+
+
+    <section class="section" id="platforms">
+      <h2>Research Platforms</h2>
+
+      <p>
+        I have contributed to the development of the following building energy
+        modelling and visualization platforms.
+      </p>
+
+      <div class="platform-grid">
+        <div class="platform-card">
+          <div>
+            <span class="platform-label">National Building Dataset</span>
+            <h3>Energy Performance of 13,000 Typical Buildings in China</h3>
+            <p>
+              A large-scale platform presenting energy-use variations of approximately
+              13,000 representative real buildings across China under present and future
+              climate conditions.
+            </p>
+          </div>
+          <a class="platform-link" href="http://8.166.131.116/#/" target="_blank" rel="noopener noreferrer">
+            Visit Platform →
+          </a>
+        </div>
+
+        <div class="platform-card">
+          <div>
+            <span class="platform-label">City-Scale UBEM</span>
+            <h3>Building-by-Building Hourly Energy Model for Shanghai</h3>
+            <p>
+              An interactive city-scale platform visualizing building-by-building,
+              hourly energy performance, with Shanghai presented as a representative
+              urban application.
+            </p>
+          </div>
+          <a class="platform-link" href="http://8.138.56.183:8090/webgl/examples/webgl/shanghaiHeating.html" target="_blank" rel="noopener noreferrer">
+            Visit Platform →
+          </a>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="publications">
